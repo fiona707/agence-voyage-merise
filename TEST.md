@@ -97,3 +97,9 @@
 | PAIEMENT| type          | ENUM     | —        | —                | acompte / solde / remboursement |
 | PAIEMENT| date_paiement | DATE     | —        | —                | Date du paiement |
 | PAIEMENT| montant       | DECIMAL  | —        | —                | Montant payé |
+
+
+## misbaou
+| Entité  | Attribut      | Type     | Longueur | Clé              | Description |
+|---------|---------------|----------|----------|------------------|-------------|
+|  misbaou|    personne   | homme    |    175cm |      pk          | from africa  |
