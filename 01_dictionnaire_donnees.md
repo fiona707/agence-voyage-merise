@@ -2,7 +2,7 @@
 ## CLIENT
 | Entité | Attribut   | Type     | Longueur | Clé     | Description |
 |--------|------------|----------|----------|---------|-------------|
-| CLIENT | id_client  | INT      | —        | PK      | Identifiant unique client |
+| CLIENT | id_client  | INT      | —        | clé primaire    | Identifiant unique client |
 | CLIENT | nom        | VARCHAR  | 100      | —       | Nom du client |
 | CLIENT | prenom     | VARCHAR  | 100      | —       | Prénom du client |
 | CLIENT | email      | VARCHAR  | 255      | Unique  | Email du client |
@@ -13,7 +13,7 @@
 ## VILLE
 | Entité | Attribut   | Type     | Longueur | Clé     | Description |
 |--------|------------|----------|----------|---------|-------------|
-| VILLE  | id_ville   | INT      | —        | PK      | Identifiant unique ville |
+| VILLE  | id_ville   | INT      | —        | clé primaire     | Identifiant unique ville |
 | VILLE  | nom_ville  | VARCHAR  | 150      | Unique  | Nom distinct de la ville |
 | VILLE  | pays       | VARCHAR  | 100      | —       | Pays de la ville |
 
@@ -22,8 +22,8 @@
 ## HOTEL
 | Entité | Attribut   | Type     | Longueur | Clé            | Description |
 |--------|------------|----------|----------|----------------|-------------|
-| HOTEL  | id_hotel   | INT      | —        | **PK**         | Identifiant hôtel |
-| HOTEL  | id_ville   | INT      | —        | **FK→VILLE**   | Ville où se trouve l’hôtel (1 hôtel par ville) |
+| HOTEL  | id_hotel   | INT      | —        | clé primaire        | Identifiant hôtel |
+| HOTEL  | id_ville   | INT      | —        | clé etrangère : ville  | Ville où se trouve l’hôtel (1 hôtel par ville) |
 | HOTEL  | nom_hotel  | VARCHAR  | 150      | —              | Nom de l’hôtel |
 | HOTEL  | categorie  | INT      | —        | —              | Catégorie (1 à 5 étoiles) |
 
@@ -32,7 +32,7 @@
 ## CIRCUIT
 | Entité  | Attribut     | Type     | Longueur | Clé     | Description |
 |---------|--------------|----------|----------|---------|-------------|
-| CIRCUIT | id_circuit   | INT      | —        | **PK**  | Identifiant circuit |
+| CIRCUIT | id_circuit   | INT      | —        | clé primaire  | Identifiant circuit |
 | CIRCUIT | nom_circuit  | VARCHAR  | 150      | —       | Nom du circuit |
 | CIRCUIT | description  | TEXT     | —        | —       | Description |
 
