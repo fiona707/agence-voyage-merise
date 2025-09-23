@@ -47,9 +47,9 @@
 | Entité        | Attribut   | Type | Longueur | Clé                           | Description      |
 |---------------|------------|------|----------|-------------------------------|------------------|
 | ETAPE_CIRCUIT | id_circuit | INT  | —        | Clé primaire, Clé étrangère   | Circuit concerné |
-| ETAPE_CIRCUIT | ordre      | INT  | —        | Clé primaire                  | Numéro d’étape (1,2,3,…) |
-| ETAPE_CIRCUIT | id_ville   | INT  | —        | Clé étrangère               | Ville visitée |
-| ETAPE_CIRCUIT | nb_nuits   | INT  | —        | —                                     | Nombre de nuits (≥ 1) |
+| ETAPE_CIRCUIT | ordre      | INT  | —        |                               | Numéro d’étape (1,2,3,…) |
+| ETAPE_CIRCUIT | id_ville   | INT  | —        | Clé étrangère                 | Ville visitée |
+| ETAPE_CIRCUIT | nb_nuits   | INT  | —        | —                             | Nombre de nuits (≥ 1) |
 ---
  
 ## ACCOMPAGNATEUR
