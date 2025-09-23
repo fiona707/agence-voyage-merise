@@ -19,6 +19,7 @@ Clé primaire = id_client ; email obligatoire et unique ; nom et prénom obligat
 **Dépendances fonctionnelles** 
 id_client > nom, prenom, email, telephone, adresse
 email > id_client
+
 ---
  
 ## VILLE
@@ -35,6 +36,7 @@ Clé primaire = id_ville ; nom_ville obligatoire et unique ; pays obligatoire
 **Dépendances fonctionnelles**  
 id_ville > nom_ville, pays  
 nom_ville > id_ville  
+
 ---
  
 ## HOTEL
@@ -52,6 +54,7 @@ Clé primaire = id_hotel ; clé étrangère = id_ville ; un hôtel par ville (un
 **Dépendances fonctionnelles**  
 id_hotel > id_ville, nom_hotel, categorie  
 id_ville > id_hotel  
+
 ---
  
 ## CIRCUIT
@@ -67,6 +70,7 @@ Clé primaire = id_circuit ; nom obligatoire ; doit inclure au moins deux villes
 
 **Dépendances fonctionnelles**  
 id_circuit > nom_circuit, description 
+
 ---
  
 ## ETAPE_CIRCUIT
@@ -82,7 +86,8 @@ id_circuit > nom_circuit, description
 Clé primaire = (id_circuit, ordre) ; clé étrangère = id_ville ; nb_nuits ≥ 1 ; au moins deux étapes par circuit  
 
 **Dépendances fonctionnelles**  
-(id_circuit, ordre) > id_ville, nb_nuits  
+(id_circuit, ordre) > id_ville, nb_nuits 
+
 ---
  
 ## ACCOMPAGNATEUR
@@ -100,7 +105,8 @@ Clé primaire = id_accomp ; email obligatoire et unique ; nom et prénom obligat
 
 **Dépendances fonctionnelles**  
 id_accomp > nom, prenom, email, telephone  
-email > id_accomp 
+email > id_accomp
+
 ---
  
 ## VOYAGE
@@ -122,7 +128,8 @@ email > id_accomp
 Clé primaire = id_voyage ; clés étrangères = id_circuit, ville_depart_id, ville_arrivee_id, id_accomp ; départ différent de l’arrivée ; unique (date_depart, ville_depart_id) et (date_arrivee, ville_arrivee_id) (RG8) ; capacité ≥ 1  
 
 **Dépendances fonctionnelles**  
-id_voyage > id_circuit, date_depart, date_arrivee, ville_depart_id, ville_arrivee_id, id_accomp, capacite, d1_limite_acompte, d2_limite_solde  
+id_voyage > id_circuit, date_depart, date_arrivee, ville_depart_id, ville_arrivee_id, id_accomp, capacite, d1_limite_acompte, d2_limite_solde 
+
 ---
  
 ## RESERVATION
@@ -141,6 +148,7 @@ Clé primaire = id_resa ; clés étrangères = id_voyage, id_client ; nb_places 
 
 **Dépendances fonctionnelles**  
 id_resa > id_voyage, id_client, nb_places, date_demande, montant_total 
+
 ---
  
 ## PAIEMENT
@@ -158,5 +166,5 @@ Clé primaire = id_paiement ; clé étrangère = id_resa ; type ∈ {acompte, so
 
 **Dépendances fonctionnelles**  
 id_paiement > id_resa, type, date_paiement, montant  
----
+
  
