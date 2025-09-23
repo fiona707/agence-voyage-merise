@@ -17,8 +17,8 @@ Enfin, nous avons intégré les règles d’unicité issues du métier comme l�
  ---
 ### ETAPE 3
 
-#### Dépendences 
+Dans cette étape, nous avons enrichi le dictionnaire de données de l’agence de voyage en précisant les contraintes et les dépendances fonctionnelles.  
+ Les dépendances fonctionnelles ont été établies afin de montrer quels attributs sont déterminés par la clé primaire ou par une clé candidate. Par exemple, dans CLIENT :  
+id_client > nom, prenom, email, telephone, adresse et email > id_client.  
 
-#### Contraintes
 
-#### Graphe (GDF)
