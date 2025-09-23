@@ -6,7 +6,7 @@ Le dictionnaire est structuré sous forme de tableau par entité :
 - Les clés sont précisées : Clé primaire et Clé étrangère.  
 - Les contraintes particulières (unicité, cardinalités, règles de gestion) sont indiquées dans la colonne Description.
 
-### ETAPE 3
+### ETAPE 2
 #### Epuration
 Lors de l’étape d’épuration, les attributs redondants ou calculables ont été retiré comme "etat" dans VOYAGE et "statut" dans RESERVATION, afin d’éviter les incohérences.  
 les noms et les types ont été harminisé pour plus de clarté (par exemple `id_client`, `VARCHAR` pour les chaînes, `DECIMAL(10,2)` pour les montants, `DATE` pour les dates).  
